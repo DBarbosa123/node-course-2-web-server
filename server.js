@@ -23,11 +23,11 @@ app.use((req, res, next) => {
 });
 
 // maintenance
-app.use((req, res, next) => {
-  res.render('maintenance.hbs', {
-    pageTitle: 'Maintenance'
-  });
-});
+// app.use((req, res, next) => {
+//   res.render('maintenance.hbs', {
+//     pageTitle: 'Maintenance'
+//   });
+// });
 
 app.use(express.static(__dirname + '/public'));
 
@@ -50,6 +50,12 @@ app.get('/', (req, res) =>{
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects page'
   });
 });
 
